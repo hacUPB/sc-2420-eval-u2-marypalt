@@ -7,12 +7,12 @@
 
 #include <iostream>
 
-#include "Ejercicio5.hpp"
+#include "Videojuego.hpp"
 
 int main(int argc, const char *argv[]) {
-    GameEngine *game = new Ejercicio5();
+    GameEngine *game = new Videojuego();
 
-    if (!game->init("Ejercicio5", 800, 400)) {
+    if (!game->init("Videojuego", 800, 400)) {
         std::cout << game->errMsg << std::endl;
         game->clear();
         delete game;

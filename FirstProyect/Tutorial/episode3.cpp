@@ -12,29 +12,25 @@ void Episode3::draw() {
     
     SDL_RenderSetViewport(renderer, nullptr);
     
-    // draw the horizontal green line
-    SDL_SetRenderDrawColor(renderer, 0x00, 0xFF, 0x00, SDL_ALPHA_OPAQUE);
-    SDL_RenderDrawLine(renderer, 0, height / 2, width, height / 2);
-    
     int cellWidth = width / 4;
     int cellHeight = height / 2;
     
-    // draw green thick line
+    // línea gruesa verde
     SDL_Rect rect = {0, height / 2, cellWidth, cellHeight};
     SDL_RenderSetViewport(renderer, &rect);
     thickLineRGBA(renderer, 50, 50, 150, 150, 10, 0x00, 0xFF, 0x00, SDL_ALPHA_OPAQUE);
     
-    // draw pink circle
+    // circunferencia rosada
     rect.x += cellWidth;
     SDL_RenderSetViewport(renderer, &rect);
     circleRGBA(renderer, 100, 100, 50, 0xFF, 0x00, 0xFF, SDL_ALPHA_OPAQUE);
     
-    // draw pink filled ellipse
+    // elipse relleno rosado
     rect.x += cellWidth;
     SDL_RenderSetViewport(renderer, &rect);
     filledEllipseRGBA(renderer, 100, 100, 50, 75, 0xFF, 0x00, 0xFF, SDL_ALPHA_OPAQUE);
     
-    // draw blue rounded rectangle
+    // rectángulo redondeado azul
     rect.x += cellWidth;
     SDL_RenderSetViewport(renderer, &rect);
     roundedRectangleRGBA(renderer, 50, 50, 150, 175, 10, 0x00, 0x00, 0xFF, SDL_ALPHA_OPAQUE);
